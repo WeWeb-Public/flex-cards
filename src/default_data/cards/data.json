@@ -1,0 +1,833 @@
+{
+    "topWwObjs": [],
+    "background": {
+        "new": false,
+        "anim": {},
+        "data": {},
+        "link": {
+            "data": {},
+            "type": "none"
+        },
+        "tags": [],
+        "ratio": -1,
+        "hidden": false,
+        "content": {
+            "data": {
+                "color": "white",
+                "style": {
+                    "boxShadow": {
+                        "b": 0,
+                        "c": "",
+                        "s": 0,
+                        "x": 0,
+                        "y": 0
+                    },
+                    "borderColor": null,
+                    "borderStyle": null,
+                    "borderWidth": 0,
+                    "borderRadius": 0
+                },
+                "backgroundColor": "#EAEBEF",
+                "gradient": null
+            },
+            "type": "ww-color"
+        },
+        "children": {},
+        "paddings": {},
+        "uniqueId": 13914674051,
+        "wwVersion": 3
+    },
+    "thumbnails": [
+        {
+            "background": {
+                "uniqueId": 224392633,
+                "wwVersion": 3,
+                "content": {
+                    "type": "ww-color",
+                    "data": {
+                        "backgroundColor": "#FFFFFF",
+                        "style": {
+                            "borderRadius": 0,
+                            "borderWidth": 0,
+                            "borderColor": null,
+                            "borderStyle": null,
+                            "boxShadow": {
+                                "x": 0,
+                                "y": 0,
+                                "b": 0,
+                                "s": 0,
+                                "c": ""
+                            }
+                        },
+                        "color": "white",
+                        "gradient": null
+                    }
+                },
+                "link": {
+                    "type": "none",
+                    "data": {}
+                },
+                "ratio": -1,
+                "paddings": {
+                    "xs": {
+                        "top": 0,
+                        "left": 0,
+                        "right": 0,
+                        "bottom": 0
+                    },
+                    "md": {
+                        "top": 0,
+                        "left": 0,
+                        "right": 0,
+                        "bottom": 0
+                    }
+                },
+                "hidden": false,
+                "tags": [],
+                "children": {},
+                "data": {},
+                "anim": {}
+            },
+            "image": {
+                "uniqueId": 12668009217,
+                "wwVersion": 3,
+                "content": {
+                    "type": "ww-image",
+                    "data": {
+                        "url": "https://cdn.weweb.app/designs/5/sections/hyG5cyLhMS5XXEWRxWUPR5kQQrKUpbrf.jpg",
+                        "alt": "",
+                        "position": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos": {
+                            "left": "0%",
+                            "top": "0%",
+                            "width": "100%",
+                            "height": "100%"
+                        },
+                        "zoom": 1,
+                        "style": {
+                            "borderRadius": 0,
+                            "borderWidth": 0,
+                            "borderColor": null,
+                            "borderStyle": null,
+                            "overlay": null,
+                            "filter": null,
+                            "boxShadow": {
+                                "x": 0,
+                                "y": 0,
+                                "b": 0,
+                                "s": 0,
+                                "c": ""
+                            }
+                        },
+                        "animation": {
+                            "duration": 0,
+                            "delay": 0,
+                            "fn": null,
+                            "opacity": 1,
+                            "scale": 1,
+                            "translateX": 0,
+                            "translateY": 0,
+                            "rotate": 0
+                        },
+                        "imgSize": {
+                            "w": 1920,
+                            "h": 1080
+                        },
+                        "hover": {
+                            "name": "",
+                            "options": {}
+                        },
+                        "focusPoint": [
+                            50,
+                            50
+                        ],
+                        "crop": "100px100p@0px0p"
+                    }
+                },
+                "link": {
+                    "type": "none",
+                    "data": {}
+                },
+                "ratio": -1,
+                "paddings": {
+                    "xs": {
+                        "top": 0,
+                        "left": 0,
+                        "right": 0,
+                        "bottom": 0
+                    },
+                    "md": {
+                        "top": 0,
+                        "left": 0,
+                        "right": 0,
+                        "bottom": 0
+                    }
+                },
+                "hidden": false,
+                "tags": [],
+                "children": {},
+                "data": {},
+                "anim": {}
+            },
+            "contents": [
+                {
+                    "uniqueId": 412144805,
+                    "wwVersion": 3,
+                    "content": {
+                        "type": "ww-text",
+                        "data": {
+                            "text": {
+                                "fr": "Nouveau texte",
+                                "en": "<span style=\"font-size:1.2rem\">At vero eos et accusamus et iusto odio dignissimos</span>"
+                            },
+                            "tag": "div",
+                            "align": "",
+                            "font": "",
+                            "size": "",
+                            "color": "",
+                            "classes": [],
+                            "children": []
+                        }
+                    },
+                    "link": {
+                        "type": "none",
+                        "data": {}
+                    },
+                    "ratio": -1,
+                    "paddings": {
+                        "xs": {
+                            "top": 40,
+                            "left": 50,
+                            "right": 50,
+                            "bottom": 20
+                        },
+                        "md": {
+                            "top": 40,
+                            "left": 50,
+                            "right": 50,
+                            "bottom": 20
+                        }
+                    },
+                    "hidden": false,
+                    "tags": [],
+                    "children": {},
+                    "data": {},
+                    "anim": {}
+                },
+                {
+                    "uniqueId": 5577478941,
+                    "wwVersion": 3,
+                    "content": {
+                        "type": "ww-text",
+                        "data": {
+                            "text": {
+                                "fr": "Nouveau texte",
+                                "en": "<font color=\"#a0a0a0\"><span style=\"font-size:0.9rem\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</span></font>"
+                            },
+                            "tag": "div",
+                            "align": "",
+                            "font": "",
+                            "size": "",
+                            "color": "",
+                            "classes": [],
+                            "children": []
+                        }
+                    },
+                    "link": {
+                        "type": "none",
+                        "data": {}
+                    },
+                    "ratio": -1,
+                    "paddings": {
+                        "xs": {
+                            "top": 0,
+                            "left": 50,
+                            "right": 50,
+                            "bottom": 0
+                        },
+                        "md": {
+                            "top": 0,
+                            "left": 50,
+                            "right": 50,
+                            "bottom": 0
+                        }
+                    },
+                    "hidden": false,
+                    "tags": [],
+                    "children": {},
+                    "data": {},
+                    "anim": {}
+                },
+                {
+                    "uniqueId": 8905199242,
+                    "wwVersion": 3,
+                    "content": {
+                        "type": "ww-row",
+                        "data": {
+                            "wwObjects": [
+                                {
+                                    "uniqueId": 4575809774,
+                                    "wwVersion": 3,
+                                    "content": {
+                                        "type": "ww-image",
+                                        "data": {
+                                            "url": "https://cdn.weweb.app/designs/5/sections/43f38AduSrYjvUm3ZirITW2lQaxBagav.jpg",
+                                            "alt": "",
+                                            "position": {
+                                                "x": 0,
+                                                "y": 0
+                                            },
+                                            "pos": {
+                                                "left": "0%",
+                                                "top": "0%",
+                                                "width": "100%",
+                                                "height": "100%"
+                                            },
+                                            "zoom": 1.5002858776443684,
+                                            "style": {
+                                                "borderRadius": 100,
+                                                "borderWidth": 0,
+                                                "borderColor": "black",
+                                                "borderStyle": "none",
+                                                "overlay": "",
+                                                "filter": "",
+                                                "boxShadow": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "b": 0,
+                                                    "s": 0,
+                                                    "c": ""
+                                                },
+                                                "minWidth": "40",
+                                                "borderRadiusUnit": "%",
+                                                "maxHeight": 0
+                                            },
+                                            "animation": {
+                                                "duration": 0,
+                                                "delay": 0,
+                                                "fn": null,
+                                                "opacity": 1,
+                                                "scale": 1,
+                                                "translateX": 0,
+                                                "translateY": 0,
+                                                "rotate": 0
+                                            },
+                                            "imgSize": {
+                                                "w": 1920,
+                                                "h": 1080
+                                            },
+                                            "hover": {
+                                                "name": "",
+                                                "options": {}
+                                            },
+                                            "focusPoint": [
+                                                50,
+                                                50
+                                            ],
+                                            "crop": "66px98p@16px1p"
+                                        }
+                                    },
+                                    "link": {
+                                        "type": "none",
+                                        "data": {}
+                                    },
+                                    "ratio": 100,
+                                    "paddings": {
+                                        "xs": {
+                                            "top": 0,
+                                            "left": 0,
+                                            "right": 0,
+                                            "bottom": 0
+                                        },
+                                        "md": {
+                                            "top": 0,
+                                            "left": 0,
+                                            "right": 0,
+                                            "bottom": 0
+                                        }
+                                    },
+                                    "hidden": false,
+                                    "tags": [],
+                                    "children": {},
+                                    "data": {},
+                                    "anim": {}
+                                },
+                                {
+                                    "uniqueId": 7445363448,
+                                    "wwVersion": 3,
+                                    "content": {
+                                        "type": "ww-text",
+                                        "data": {
+                                            "text": {
+                                                "fr": "Nouveau texte",
+                                                "en": "<span style=\"font-size:1rem\">Jean Dupont</span><br><span style=\"font-size:0.7rem\">10 Juin. 2019</span><br>"
+                                            },
+                                            "tag": "div",
+                                            "align": "",
+                                            "font": "",
+                                            "size": "",
+                                            "color": "",
+                                            "classes": [],
+                                            "children": []
+                                        }
+                                    },
+                                    "link": {
+                                        "type": "none",
+                                        "data": {}
+                                    },
+                                    "ratio": -1,
+                                    "paddings": {
+                                        "xs": {
+                                            "top": 0,
+                                            "left": 10,
+                                            "right": 0,
+                                            "bottom": 0
+                                        },
+                                        "md": {
+                                            "top": 0,
+                                            "left": 10,
+                                            "right": 0,
+                                            "bottom": 0
+                                        }
+                                    },
+                                    "hidden": false,
+                                    "tags": [],
+                                    "children": {},
+                                    "data": {},
+                                    "anim": {}
+                                }
+                            ],
+                            "align": "center",
+                            "justify": "flex-start"
+                        }
+                    },
+                    "link": {
+                        "type": "none",
+                        "data": {}
+                    },
+                    "ratio": -1,
+                    "paddings": {
+                        "xs": {
+                            "top": 50,
+                            "left": 30,
+                            "right": 30,
+                            "bottom": 30
+                        },
+                        "md": {
+                            "top": 50,
+                            "left": 30,
+                            "right": 30,
+                            "bottom": 30
+                        }
+                    },
+                    "hidden": false,
+                    "tags": [],
+                    "children": {},
+                    "data": {},
+                    "anim": {}
+                }
+            ]
+        },
+        {
+            "background": {
+                "uniqueId": 10969691370,
+                "wwVersion": 3,
+                "content": {
+                    "type": "ww-color",
+                    "data": {
+                        "backgroundColor": "#FFFFFF",
+                        "style": {
+                            "borderRadius": 0,
+                            "borderWidth": 0,
+                            "borderColor": null,
+                            "borderStyle": null,
+                            "boxShadow": {
+                                "x": 0,
+                                "y": 0,
+                                "b": 0,
+                                "s": 0,
+                                "c": ""
+                            }
+                        },
+                        "color": "white",
+                        "gradient": null
+                    }
+                },
+                "link": {
+                    "type": "none",
+                    "data": {}
+                },
+                "ratio": -1,
+                "paddings": {
+                    "xs": {
+                        "top": 0,
+                        "left": 0,
+                        "right": 0,
+                        "bottom": 0
+                    },
+                    "md": {
+                        "top": 0,
+                        "left": 0,
+                        "right": 0,
+                        "bottom": 0
+                    }
+                },
+                "hidden": false,
+                "tags": [],
+                "children": {},
+                "data": {},
+                "anim": {}
+            },
+            "image": {
+                "uniqueId": 243765986,
+                "wwVersion": 3,
+                "content": {
+                    "type": "ww-image",
+                    "data": {
+                        "url": "https://cdn.weweb.app/designs/5/sections/UOjnwGnMlIGEduQo4Ky4WoQ1VILnrf3g.jpg",
+                        "alt": "",
+                        "position": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "pos": {
+                            "left": "0%",
+                            "top": "0%",
+                            "width": "100%",
+                            "height": "100%"
+                        },
+                        "zoom": 1,
+                        "style": {
+                            "borderRadius": 0,
+                            "borderWidth": 0,
+                            "borderColor": null,
+                            "borderStyle": null,
+                            "overlay": null,
+                            "filter": null,
+                            "boxShadow": {
+                                "x": 0,
+                                "y": 0,
+                                "b": 0,
+                                "s": 0,
+                                "c": ""
+                            }
+                        },
+                        "animation": {
+                            "duration": 0,
+                            "delay": 0,
+                            "fn": null,
+                            "opacity": 1,
+                            "scale": 1,
+                            "translateX": 0,
+                            "translateY": 0,
+                            "rotate": 0
+                        },
+                        "imgSize": {
+                            "w": 1920,
+                            "h": 1080
+                        },
+                        "hover": {
+                            "name": "",
+                            "options": {}
+                        },
+                        "focusPoint": [
+                            50,
+                            50
+                        ],
+                        "crop": "100px100p@0px0p"
+                    }
+                },
+                "link": {
+                    "type": "none",
+                    "data": {}
+                },
+                "ratio": -1,
+                "paddings": {
+                    "xs": {
+                        "top": 0,
+                        "left": 0,
+                        "right": 0,
+                        "bottom": 0
+                    },
+                    "md": {
+                        "top": 0,
+                        "left": 0,
+                        "right": 0,
+                        "bottom": 0
+                    }
+                },
+                "hidden": false,
+                "tags": [],
+                "children": {},
+                "data": {},
+                "anim": {}
+            },
+            "contents": [
+                {
+                    "uniqueId": 1009692757,
+                    "wwVersion": 3,
+                    "content": {
+                        "type": "ww-text",
+                        "data": {
+                            "text": {
+                                "fr": "Nouveau texte",
+                                "en": "<span style=\"font-size:1.2rem\">At vero eos et accusamus et iusto odio dignissimos</span>"
+                            },
+                            "tag": "div",
+                            "align": "",
+                            "font": "",
+                            "size": "",
+                            "color": "",
+                            "classes": [],
+                            "children": []
+                        }
+                    },
+                    "link": {
+                        "type": "none",
+                        "data": {}
+                    },
+                    "ratio": -1,
+                    "paddings": {
+                        "xs": {
+                            "top": 40,
+                            "left": 50,
+                            "right": 50,
+                            "bottom": 20
+                        },
+                        "md": {
+                            "top": 40,
+                            "left": 50,
+                            "right": 50,
+                            "bottom": 20
+                        }
+                    },
+                    "hidden": false,
+                    "tags": [],
+                    "children": {},
+                    "data": {},
+                    "anim": {}
+                },
+                {
+                    "uniqueId": 6699346716,
+                    "wwVersion": 3,
+                    "content": {
+                        "type": "ww-text",
+                        "data": {
+                            "text": {
+                                "fr": "Nouveau texte",
+                                "en": "<font color=\"#a0a0a0\"><span style=\"font-size:0.9rem\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</span></font>"
+                            },
+                            "tag": "div",
+                            "align": "",
+                            "font": "",
+                            "size": "",
+                            "color": "",
+                            "classes": [],
+                            "children": []
+                        }
+                    },
+                    "link": {
+                        "type": "none",
+                        "data": {}
+                    },
+                    "ratio": -1,
+                    "paddings": {
+                        "xs": {
+                            "top": 0,
+                            "left": 50,
+                            "right": 50,
+                            "bottom": 0
+                        },
+                        "md": {
+                            "top": 0,
+                            "left": 50,
+                            "right": 50,
+                            "bottom": 0
+                        }
+                    },
+                    "hidden": false,
+                    "tags": [],
+                    "children": {},
+                    "data": {},
+                    "anim": {}
+                },
+                {
+                    "uniqueId": 13557284596,
+                    "wwVersion": 3,
+                    "content": {
+                        "type": "ww-row",
+                        "data": {
+                            "wwObjects": [
+                                {
+                                    "uniqueId": 8340715655,
+                                    "wwVersion": 3,
+                                    "content": {
+                                        "type": "ww-image",
+                                        "data": {
+                                            "url": "https://cdn.weweb.app/designs/5/sections/43f38AduSrYjvUm3ZirITW2lQaxBagav.jpg",
+                                            "alt": "",
+                                            "position": {
+                                                "x": 0,
+                                                "y": 0
+                                            },
+                                            "pos": {
+                                                "left": "0%",
+                                                "top": "0%",
+                                                "width": "100%",
+                                                "height": "100%"
+                                            },
+                                            "zoom": 1.5002858776443684,
+                                            "style": {
+                                                "borderRadius": 100,
+                                                "borderWidth": 0,
+                                                "borderColor": "black",
+                                                "borderStyle": "none",
+                                                "overlay": "",
+                                                "filter": "",
+                                                "boxShadow": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "b": 0,
+                                                    "s": 0,
+                                                    "c": ""
+                                                },
+                                                "minWidth": "40",
+                                                "borderRadiusUnit": "%",
+                                                "maxHeight": 0
+                                            },
+                                            "animation": {
+                                                "duration": 0,
+                                                "delay": 0,
+                                                "fn": null,
+                                                "opacity": 1,
+                                                "scale": 1,
+                                                "translateX": 0,
+                                                "translateY": 0,
+                                                "rotate": 0
+                                            },
+                                            "imgSize": {
+                                                "w": 1920,
+                                                "h": 1080
+                                            },
+                                            "hover": {
+                                                "name": "",
+                                                "options": {}
+                                            },
+                                            "focusPoint": [
+                                                50,
+                                                50
+                                            ],
+                                            "crop": "66px98p@16px1p"
+                                        }
+                                    },
+                                    "link": {
+                                        "type": "none",
+                                        "data": {}
+                                    },
+                                    "ratio": 100,
+                                    "paddings": {
+                                        "xs": {
+                                            "top": 0,
+                                            "left": 0,
+                                            "right": 0,
+                                            "bottom": 0
+                                        },
+                                        "md": {
+                                            "top": 0,
+                                            "left": 0,
+                                            "right": 0,
+                                            "bottom": 0
+                                        }
+                                    },
+                                    "hidden": false,
+                                    "tags": [],
+                                    "children": {},
+                                    "data": {},
+                                    "anim": {}
+                                },
+                                {
+                                    "uniqueId": 4313493347,
+                                    "wwVersion": 3,
+                                    "content": {
+                                        "type": "ww-text",
+                                        "data": {
+                                            "text": {
+                                                "fr": "Nouveau texte",
+                                                "en": "<span style=\"font-size:1rem\">Jean Dupont</span><br><span style=\"font-size:0.7rem\">8 Juin. 2019</span><br>"
+                                            },
+                                            "tag": "div",
+                                            "align": "",
+                                            "font": "",
+                                            "size": "",
+                                            "color": "",
+                                            "classes": [],
+                                            "children": []
+                                        }
+                                    },
+                                    "link": {
+                                        "type": "none",
+                                        "data": {}
+                                    },
+                                    "ratio": -1,
+                                    "paddings": {
+                                        "xs": {
+                                            "top": 0,
+                                            "left": 10,
+                                            "right": 0,
+                                            "bottom": 0
+                                        },
+                                        "md": {
+                                            "top": 0,
+                                            "left": 10,
+                                            "right": 0,
+                                            "bottom": 0
+                                        }
+                                    },
+                                    "hidden": false,
+                                    "tags": [],
+                                    "children": {},
+                                    "data": {},
+                                    "anim": {}
+                                }
+                            ],
+                            "align": "center",
+                            "justify": "flex-start"
+                        }
+                    },
+                    "link": {
+                        "type": "none",
+                        "data": {}
+                    },
+                    "ratio": -1,
+                    "paddings": {
+                        "xs": {
+                            "top": 50,
+                            "left": 30,
+                            "right": 30,
+                            "bottom": 30
+                        },
+                        "md": {
+                            "top": 50,
+                            "left": 30,
+                            "right": 30,
+                            "bottom": 30
+                        }
+                    },
+                    "hidden": false,
+                    "tags": [],
+                    "children": {},
+                    "data": {},
+                    "anim": {}
+                }
+            ]
+        }
+    ],
+    "bottomWwObjs": [],
+    "thumbnailsPerLine": "3",
+    "shadowColor": "0 10px 40px 0 rgba(113, 124, 137, 0.2)",
+    "shadowColorAfter": "0 16px 32px rgba(113, 124, 137, 0.4)",
+    "cardBorderRadius": "10"
+}

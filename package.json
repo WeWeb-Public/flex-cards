@@ -1,0 +1,26 @@
+{
+    "name": "flex-cards",
+    "type": "section",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WeWeb-Public/blog-cards"
+    },
+    "version": "0.0.4",
+    "private": true,
+    "scripts": {
+        "build": "weweb-build",
+        "serve": "weweb-serve",
+        "upload": "weweb-upload"
+    },
+    "dependencies": {
+        "vue": "^2.5.16"
+    },
+    "devDependencies": {
+        "weweb-client": "^1.0.50"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
+}
