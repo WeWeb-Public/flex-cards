@@ -135,6 +135,19 @@ wwLib.wwPopups.addStory('BLOG_CARD_CONFIG', {
             },
             {
                 label: {
+                    en: 'Space between cards in px:',
+                    fr: 'Espace entre les cartes en px:'
+                },
+                type: 'text',
+                key: 'spaceBetweenCards',
+                valueData: 'spaceBetweenCards',
+                desc: {
+                    en: 'Example: 15',
+                    fr: 'Exemple : 15'
+                }
+            },
+            {
+                label: {
                     en: 'Animation at hover:',
                     fr: 'Animer au passage de la souris :'
                 },
@@ -200,12 +213,12 @@ export default {
         customStyle() {
             const shadowColorAfter = this.section.data.animAtHover ? this.section.data.shadowColorAfter : this.section.data.shadowColor;
             const pixelsToScrollTop = `-${this.section.data.animAtHover ? this.section.data.pixelsToScrollTop : '0'}px`;
-            console.log(this.section.data.animAtHover, shadowColorAfter, pixelsToScrollTop)
             return {
                 '--cardBorderRadius': `${this.section.data.cardBorderRadius}px`,
                 '--shadowColor': this.section.data.shadowColor,
                 '--shadowColorAfter': shadowColorAfter,
-                '--pixelsToScrollTop': pixelsToScrollTop
+                '--pixelsToScrollTop': pixelsToScrollTop,
+                '--spaceBetweenCards': `0 ${this.section.data.spaceBetweenCards}px`
             }
         }
     },
@@ -249,6 +262,10 @@ export default {
                 this.section.data.cardBorderRadius = '0';
                 needUpdate = true;
             }
+            if (!this.section.data.spaceBetweenCards) {
+                this.section.data.spaceBetweenCards = '15';
+                needUpdate = true;
+            }
             if (!this.section.data.numberOfCards) {
                 this.section.data.numberOfCards = 'three';
                 needUpdate = true;
@@ -276,29 +293,6 @@ export default {
                 return 0
             }
         },
-
-        // getNumberOfCardClass() {
-        //     switch (this.section.numberOfCards) {
-        //         case 'one':
-        //             return 'one'
-        //             break;
-        //         case 'two':
-
-        //             break;
-        //         case 'three':
-
-        //             break;
-        //         case 'four':
-
-        //             break;
-        //         case 'five':
-
-        //             break;
-
-        //         default:
-        //             break;
-        //     }
-        // },
 
         /* wwManager:start */
         add(list, options) {
@@ -344,11 +338,13 @@ export default {
                     cardBorderRadius: this.section.data.cardBorderRadius,
                     animAtHover: this.section.data.animAtHover,
                     shadowColorAfter: this.section.data.shadowColorAfter,
-                    pixelsToScrollTop: this.section.data.pixelsToScrollTop
+                    pixelsToScrollTop: this.section.data.pixelsToScrollTop,
+                    spaceBetweenCards: this.section.data.spaceBetweenCards
                 },
             }
 
             const result = await wwLib.wwPopups.open(options)
+            console.log(result)
             let updateSection = false;
             if (result.numberOfCards) {
                 this.section.data.numberOfCards = result.numberOfCards;
@@ -362,6 +358,11 @@ export default {
 
             if (result.cardBorderRadius) {
                 this.section.data.cardBorderRadius = result.cardBorderRadius;
+                updateSection = true;
+            }
+
+            if (result.spaceBetweenCards) {
+                this.section.data.spaceBetweenCards = result.spaceBetweenCards;
                 updateSection = true;
             }
 
@@ -383,9 +384,6 @@ export default {
             if (updateSection) {
                 this.sectionCtrl.update(this.section);
             }
-
-
-            console.log(result);
         }
         /* wwManager:end */
     },
@@ -442,7 +440,7 @@ export default {
             margin: 30px 0;
             min-height: 50px;
             transition: transform 0.4s ease-out;
-            padding: 0 15px;
+            padding: var(--spaceBetweenCards);
             @media (min-width: 768px) {
                 &.one {
                     flex-basis: 100%;
@@ -461,6 +459,7 @@ export default {
                 }
             }
             .shadow {
+                height: 100%;
                 transition: box-shadow 0.4s ease-out;
                 border-radius: var(--cardBorderRadius);
                 box-shadow: var(--shadowColor);
