@@ -1,5 +1,5 @@
 <template>
-    <div class="blog-cards" :style="customStyle">
+    <div class="flex-cards" :style="customStyle">
         <!-- wwManager:start -->
         <wwSectionEditMenu :sectionCtrl="sectionCtrl" :options="openOptions"></wwSectionEditMenu>
         <!-- wwManager:end -->
@@ -13,11 +13,10 @@
         </div>
 
         <!--THUMBNAILS-->
-
         <div class="thumbnail-container">
-            <div class="thumbnail" :class="[section.data.numberOfCards]" v-for="(thumbnail, index) in section.data.thumbnails" :key="thumbnail.uniqueId">
-                <div class="shadow">
-                    <div class="thumbnail-border">
+            <div class="thumbnail" :class="[numberOfCards]" v-for="(thumbnail, index) in section.data.thumbnails" :key="thumbnail.uniqueId">
+                <!-- <div class="shadow"> -->
+                    <!-- <div class="thumbnail-border"> -->
                         <!-- wwManager:start -->
                         <wwContextMenu tag="div" class="contextmenu" v-if="sectionCtrl.getEditMode() == 'CONTENT'" @ww-add-before="addCardBefore(index)" @ww-add-after="addCardAfter(index)" @ww-remove="removeCard(index)">
                             <div class="wwi wwi-config"></div>
@@ -32,8 +31,8 @@
                                 </wwLayoutColumn>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    <!-- </div> -->
+                <!-- </div> -->
             </div>
         </div>
 
@@ -47,153 +46,10 @@
 </template>
 
 <script>
+import popupConfig from './popupConfig.js'
 
 /* wwManager:start */
-wwLib.wwPopups.addStory('BLOG_CARD_CONFIG', {
-    title: {
-        en: 'Cards config',
-        fr: 'Configuration des cartes'
-    },
-    type: 'wwPopupForm',
-    storyData: {
-        fields: [
-            {
-                label: {
-                    en: 'Number of cards per line:',
-                    fr: 'Nombre de carte par ligne :'
-                },
-                type: 'select',
-                key: 'numberOfCards',
-                valueData: 'numberOfCards',
-                options: {
-                    type: 'text',
-                    values: [
-                        {
-                            value: 'one',
-                            text: {
-                                en: 'one',
-                                fr: 'une'
-                            }
-                        },
-                        {
-                            value: 'two',
-                            text: {
-                                en: 'two',
-                                fr: 'deux'
-                            }
-                        },
-                        {
-                            value: 'three',
-                            default: true,
-                            text: {
-                                en: 'three',
-                                fr: 'trois'
-                            }
-                        },
-                        {
-                            value: 'four',
-                            text: {
-                                en: 'four',
-                                fr: 'quatre'
-                            }
-                        },
-                        {
-                            value: 'five',
-                            text: {
-                                en: 'five',
-                                fr: 'cinq'
-                            }
-                        },
-                    ]
-                }
-            },
-            {
-                label: {
-                    en: 'Shadow Color:',
-                    fr: 'Couleur de l\'ombre :'
-                },
-                type: 'text',
-                key: 'shadowColor',
-                valueData: 'shadowColor',
-                desc: {
-                    en: 'Example: 0 10px 40px 0 rgba(113, 124, 137, 0.2)',
-                    fr: 'Exemple : 0 10px 40px 0 rgba(113, 124, 137, 0.2)'
-                }
-            },
-            {
-                label: {
-                    en: 'Border radius in px:',
-                    fr: 'Arrondis des coins en px :'
-                },
-                type: 'text',
-                key: 'cardBorderRadius',
-                valueData: 'cardBorderRadius',
-                desc: {
-                    en: 'Edit card border radius',
-                    fr: 'Changer la bordure des coins des cartes'
-                }
-            },
-            {
-                label: {
-                    en: 'Space between cards in px:',
-                    fr: 'Espace entre les cartes en px:'
-                },
-                type: 'text',
-                key: 'spaceBetweenCards',
-                valueData: 'spaceBetweenCards',
-                desc: {
-                    en: 'Example: 15',
-                    fr: 'Exemple : 15'
-                }
-            },
-            {
-                label: {
-                    en: 'Animation at hover:',
-                    fr: 'Animer au passage de la souris :'
-                },
-                type: 'radio',
-                key: 'animAtHover',
-                valueData: 'animAtHover'
-            },
-            {
-                label: {
-                    en: 'Shadow Color After hover:',
-                    fr: 'Couleur de l\'ombre après le hover:'
-                },
-                type: 'text',
-                key: 'shadowColorAfter',
-                valueData: 'shadowColorAfter',
-                desc: {
-                    en: 'Example: 0 16px 32px rgba(113, 124, 137, 0.4)',
-                    fr: 'Exemple : 0 16px 32px rgba(113, 124, 137, 0.4)'
-                }
-            },
-            {
-                label: {
-                    en: 'Number of pixels the card will scroll top:',
-                    fr: 'Nombre de pixels dont la carte va se soulever:'
-                },
-                type: 'text',
-                key: 'pixelsToScrollTop',
-                valueData: 'pixelsToScrollTop',
-                desc: {
-                    en: 'Example: 10',
-                    fr: 'Exemple : 10'
-                }
-            }
-        ]
-    },
-    buttons: {
-        NEXT: {
-            text: {
-                en: 'Ok',
-                fr: 'Ok'
-            },
-            next: false
-        }
-    }
-})
-
+wwLib.wwPopups.addStory('FLEX_CARD_CONFIG', popupConfig)
 /* wwManager:end */
 
 export default {
@@ -203,26 +59,58 @@ export default {
     },
     data() {
         return {
-            maxThumbnailsPerLine: 4,
+            innerWidth: 1024
         }
     },
     computed: {
+        c_screen() {
+            if (this.innerWidth < 768) {
+                return 'xs'
+            } else if (this.innerWidth >= 768 && this.innerWidth < 992) {
+                return 'sm'
+            } else if (this.innerWidth >= 992 && this.innerWidth < 1200) {
+                return 'md'
+            } else {
+                return 'lg'
+            }
+        },
         section() {
             return this.sectionCtrl.get();
         },
         customStyle() {
             const shadowColorAfter = this.section.data.animAtHover ? this.section.data.shadowColorAfter : this.section.data.shadowColor;
             const pixelsToScrollTop = `-${this.section.data.animAtHover ? this.section.data.pixelsToScrollTop : '0'}px`;
+            const contentHeight = (this.section.data.isCardFitContent) ? 'auto': '100%';
             return {
                 '--cardBorderRadius': `${this.section.data.cardBorderRadius}px`,
                 '--shadowColor': this.section.data.shadowColor,
                 '--shadowColorAfter': shadowColorAfter,
                 '--pixelsToScrollTop': pixelsToScrollTop,
-                '--spaceBetweenCards': `0 ${this.section.data.spaceBetweenCards}px`
+                '--spaceBetweenCards': `0 ${this.section.data.spaceBetweenCards}px`,
+                '--contentHeight': contentHeight
+            }
+        },
+        numberOfCards() {
+            switch (this.c_screen) {
+                case 'lg':
+                    return this.section.data.numberOfCards
+                case 'md':
+                    return this.section.data.numberOfCardsLaptop
+                case 'sm':
+                    return this.section.data.numberOfCardsTablet
+                default:
+                    return this.section.data.numberOfCardsPhone
             }
         }
     },
     methods: {
+        computeShadow(s) {
+            if (!s) return ''
+            return `${s.x}px ${s.y}px ${s.b}px ${s.s}px ${s.c}`
+        },
+        setScreenSize() {
+            this.innerWidth = wwLib.getFrontWindow().innerWidth
+        },
         initData() {
             let needUpdate = false;
 
@@ -270,30 +158,29 @@ export default {
                 this.section.data.numberOfCards = 'three';
                 needUpdate = true;
             }
+            if (!this.section.data.numberOfCardsLaptop) {
+                this.section.data.numberOfCardsLaptop = this.section.data.numberOfCards;
+                needUpdate = true;
+            }
+            if (!this.section.data.numberOfCardsTablet) {
+                this.section.data.numberOfCardsTablet = this.section.data.numberOfCards;
+                needUpdate = true;
+            }
+            if (!this.section.data.numberOfCardsPhone) {
+                this.section.data.numberOfCardsPhone = 'one';
+                needUpdate = true;
+            }
+            if (!this.section.data.isCardFitContent) {
+                this.section.data.isCardFitContent = false;
+                needUpdate = true;
+            }
             if (needUpdate) {
                 this.sectionCtrl.update(this.section);
             }
         },
         init() {
-            window.addEventListener("resize", this.isMobileOrPair);
+            window.addEventListener("resize", this.setScreenSize);
         },
-        isMobileOrPair(index) {
-            let w = window,
-                d = document,
-                e = d.documentElement,
-                g = d.getElementsByTagName('body')[0],
-                x = w.innerWidth || e.clientWidth || g.clientWidth,
-                y = w.innerHeight || e.clientHeight || g.clientHeight;
-
-            if (x < 769) {
-                return 1
-            } else if (index % 2) {
-                return 1;
-            } else {
-                return 0
-            }
-        },
-
         /* wwManager:start */
         add(list, options) {
             list.splice(options.index, 0, options.wwObject);
@@ -331,28 +218,44 @@ export default {
 
         async openOptions() {
             let options = {
-                firstPage: 'BLOG_CARD_CONFIG',
+                firstPage: 'FLEX_CARD_CONFIG',
                 data: {
                     numberOfCards: this.section.data.numberOfCards,
-                    shadowColor: this.section.data.shadowColor,
+                    numberOfCardsLaptop: this.section.data.numberOfCardsLaptop,
+                    numberOfCardsTablet: this.section.data.numberOfCardsTablet,
+                    numberOfCardsPhone: this.section.data.numberOfCardsPhone,
+                    shadowColor: this.section.data.shadowColorObj,
                     cardBorderRadius: this.section.data.cardBorderRadius,
                     animAtHover: this.section.data.animAtHover,
-                    shadowColorAfter: this.section.data.shadowColorAfter,
+                    shadowColorAfter: this.section.data.shadowColorAfterObj,
                     pixelsToScrollTop: this.section.data.pixelsToScrollTop,
-                    spaceBetweenCards: this.section.data.spaceBetweenCards
+                    spaceBetweenCards: this.section.data.spaceBetweenCards,
+                    isCardFitContent: this.section.data.isCardFitContent
                 },
             }
 
             const result = await wwLib.wwPopups.open(options)
-            console.log(result)
             let updateSection = false;
             if (result.numberOfCards) {
                 this.section.data.numberOfCards = result.numberOfCards;
                 updateSection = true;
             }
+            if (result.numberOfCardsLaptop) {
+                this.section.data.numberOfCardsLaptop = result.numberOfCardsLaptop;
+                updateSection = true;
+            }
+            if (result.numberOfCardsTablet) {
+                this.section.data.numberOfCardsTablet = result.numberOfCardsTablet;
+                updateSection = true;
+            }
+            if (result.numberOfCardsPhone) {
+                this.section.data.numberOfCardsPhone = 1;
+                updateSection = true;
+            }
 
             if (result.shadowColor) {
-                this.section.data.shadowColor = result.shadowColor;
+                this.section.data.shadowColorObj = result.shadowColor;
+                this.section.data.shadowColor = this.computeShadow(result.shadowColor);
                 updateSection = true;
             }
 
@@ -372,12 +275,18 @@ export default {
             }
 
             if (result.shadowColorAfter) {
-                this.section.data.shadowColorAfter = result.shadowColorAfter;
+                this.section.data.shadowColorAfterObj = result.shadowColorAfter;
+                this.section.data.shadowColorAfter = this.computeShadow(result.shadowColorAfter);
                 updateSection = true;
             }
 
             if (result.pixelsToScrollTop) {
                 this.section.data.pixelsToScrollTop = result.pixelsToScrollTop;
+                updateSection = true;
+            }
+
+            if (typeof (result.isCardFitContent) != 'undefined') {
+                this.section.data.isCardFitContent = result.isCardFitContent;
                 updateSection = true;
             }
 
@@ -401,7 +310,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.blog-cards {
+.flex-cards {
     position: relative;
 
     .background {
@@ -433,7 +342,6 @@ export default {
             width: 80%;
             margin-left: 10%;
         }
-
         .thumbnail {
             flex-basis: 100%;
             position: relative;
@@ -441,40 +349,20 @@ export default {
             min-height: 50px;
             transition: transform 0.4s ease-out;
             padding: var(--spaceBetweenCards);
-            @media (min-width: 768px) {
-                &.one {
-                    flex-basis: 100%;
-                }
-                &.two {
-                    flex-basis: 50%;
-                }
-                &.three {
-                    flex-basis: 33.3333%;
-                }
-                &.four {
-                    flex-basis: 25%;
-                }
-                &.five {
-                    flex-basis: 20%;
-                }
+            &.one {
+                flex-basis: 100%;
             }
-            .shadow {
-                height: 100%;
-                transition: box-shadow 0.4s ease-out;
-                border-radius: var(--cardBorderRadius);
-                box-shadow: var(--shadowColor);
-                .thumbnail-border {
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    overflow: hidden;
-                    border-radius: var(--cardBorderRadius);
-                    width: 100%;
-                    height: 100%;
-                }
-                &:hover {
-                    box-shadow: var(--shadowColorAfter);
-                }
+            &.two {
+                flex-basis: 50%;
+            }
+            &.three {
+                flex-basis: 33.3333%;
+            }
+            &.four {
+                flex-basis: 25%;
+            }
+            &.five {
+                flex-basis: 20%;
             }
             &:hover {
                 transform: translateY(var(--pixelsToScrollTop));
@@ -487,7 +375,17 @@ export default {
             .content-container {
                 position: relative;
                 width: 100%;
-                height: 100%;
+                height: var(--contentHeight);
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                overflow: hidden;
+                transition: box-shadow 0.4s ease-out;
+                border-radius: var(--cardBorderRadius);
+                box-shadow: var(--shadowColor);
+                &:hover {
+                    box-shadow: var(--shadowColorAfter);
+                }
             }
 
             .image-container {
@@ -503,7 +401,7 @@ export default {
             .contextmenu {
                 position: absolute;
                 top: 0;
-                left: 0;
+                left: var(--spaceBetweenCards);
                 transform: translate(-50%, -50%);
                 width: 30px;
                 height: 30px;
